@@ -21,18 +21,6 @@ For the Blink sample:
     - 2 jumper wires
     - 1 breadboard
 
-For the Button sample:
-- [Rainbow Hat for Android Things](https://shop.pimoroni.com/products/rainbow-hat-for-android-things) or the following individual components:
-    - 1 push button
-    - 1 resistor
-    - 2 jumper wires
-    - 1 breadboard
-
-For the PWM sample:
-- 1 servo
-- 3 jumper wires
-- external power source (recommended, depending on the servo)
-
 ## Build and install
 
 On Android Studio, select the module in the select box by the "Run" button, and
@@ -60,39 +48,6 @@ If you have the Raspberry Pi [Rainbow Hat for Android Things](https://shop.pimor
 ```
 
 Blinks an LED connected to a GPIO pin.
-
-### Button
-
-If you have the Raspberry Pi [Rainbow Hat for Android Things](https://shop.pimoroni.com/products/rainbow-hat-for-android-things), just plug it onto your Raspberry Pi 3.
-
-![Schematics for Intel Edison](button/edison_schematics.png)
-![Schematics for Raspberry Pi 3](button/rpi3_schematics.png)
-
-```bash
-    ./gradlew button:installDebug
-    adb shell am start com.example.androidthings.simplepio/.ButtonActivity
-```
-
-Logs to logcat when a button connected to a GPIO pin is pressed. Make sure you
-use a pull-down or pull-up resistor to avoid fluctuation.
-
-### PWM
-
-![Schematics for Intel Edison](pwm/edison_schematics.png)
-![Schematics for Raspberry Pi 3](pwm/rpi3_schematics.png)
-
-```bash
-    ./gradlew pwm:installDebug
-    adb shell am start com.example.androidthings.simplepio/.PWMActivity
-```
-
-Moves a servo from one side to the other on regular steps at a predefined rate.
-
-Servos in general have three wires: Vcc, ground and signal. Connect Vcc to the
-board's Vcc or, ideally, to an external power. Ground should go to the board's
-ground, and signal goes to the PWM pin specified in the BoardDefaults class. The
-most common colors for each wire are red for Vin, gray for ground and orange for
-signal, but confirm with your servo's datasheet to be sure.
 
 ## License
 

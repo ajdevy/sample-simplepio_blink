@@ -15,5 +15,3 @@
  */
 
 include ':blink'
-include ':pwm'
-include ':button'
